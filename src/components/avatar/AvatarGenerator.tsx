@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
-import { colors, gradients } from '../../styles/theme';
+import { colors } from '../../styles/theme';
 import WebcamCapture from './WebcamCapture';
 import Button from '../common/Button';
 import { generateCharacterAvatar, getOpenAIErrorMessage } from '../../server/openaiService';

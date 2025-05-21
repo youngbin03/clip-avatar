@@ -42,12 +42,6 @@ const STYLE_IMAGES = [
   '/src/assets/styles/dylan-1747776767139.png'
 ];
 
-// 스타일 이미지를 랜덤하게 선택하는 함수
-const getRandomStyleImage = (): string => {
-  const randomIndex = Math.floor(Math.random() * STYLE_IMAGES.length);
-  return STYLE_IMAGES[randomIndex];
-};
-
 // 이미지 데이터 URL을 File 객체로 변환 (PNG 형식으로)
 const dataURLtoFile = async (dataURL: string, filename: string): Promise<File> => {
   // 데이터 URL이 PNG가 아닌 경우 캔버스를 사용하여 PNG로 변환
@@ -115,19 +109,6 @@ const dataURLtoFile = async (dataURL: string, filename: string): Promise<File> =
     }
 
     return new File([u8arr], filename, { type: mime });
-  }
-};
-
-// 이미지 URL을 File 객체로 변환하는 함수
-const imageUrlToFile = async (url: string, filename: string): Promise<File> => {
-  try {
-    // 이미지 로드
-    const response = await fetch(url);
-    const blob = await response.blob();
-    return new File([blob], filename, { type: 'image/png' });
-  } catch (error) {
-    console.error('이미지를 로드하는 중 오류가 발생했습니다:', error);
-    throw new Error('스타일 이미지를 로드할 수 없습니다.');
   }
 };
 

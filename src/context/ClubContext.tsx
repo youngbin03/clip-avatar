@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useContext, useCallback } from 'react';
+import { createContext, useState, useEffect, useContext, useCallback } from 'react';
 import type { ReactNode } from 'react';
 import { 
   getClubs, 
@@ -10,7 +10,6 @@ import {
   addMember, 
   addActivity,
   addRollingPaper,
-  initializeFirebaseData,
   getRankedClubs
 } from '../firebase/services';
 import { mockClubs } from '../data/mockData';
@@ -113,7 +112,6 @@ export const ClubProvider = ({ children }: ClubProviderProps) => {
       // Firebase 연결 재시도 및 오류 처리 개선
       let retryCount = 0;
       const maxRetries = 3;
-      let success = false;
       
       const fetchDataWithRetry = async (): Promise<boolean> => {
         try {
@@ -137,7 +135,6 @@ export const ClubProvider = ({ children }: ClubProviderProps) => {
           }
           
           console.log('Firebase 데이터 로드 완료');
-          success = true;
           return true;
         } catch (err) {
           retryCount++;

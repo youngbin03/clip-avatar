@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { colors, gradients } from '../../styles/theme';
+import { colors } from '../../styles/theme';
 import Button from '../common/Button';
 import Card from '../common/Card';
 import Container from '../common/Container';
