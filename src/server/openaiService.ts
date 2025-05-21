@@ -12,9 +12,10 @@ const logError = (message: string, error?: any) => {
 };
 
 // OpenAI API 클라이언트 초기화
-const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
-if (!apiKey) {
-  console.warn('OpenAI API 키가 설정되지 않았습니다. .env 파일에 VITE_OPENAI_API_KEY를 추가해주세요.');
+const apiKey = import.meta.env.VITE_OPENAI_API_KEY as string | undefined;
+
+if (!apiKey || apiKey.trim() === '') {
+  throw new Error('VITE_OPENAI_API_KEY 가 설정되지 않았습니다.');
 }
 
 const openai = new OpenAI({
