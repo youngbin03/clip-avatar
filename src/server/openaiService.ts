@@ -12,7 +12,7 @@ const logError = (message: string, error?: any) => {
 };
 
 // OpenAI API 클라이언트 초기화
-const apiKey = "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";
+const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
 if (!apiKey) {
   console.warn('OpenAI API 키가 설정되지 않았습니다. .env 파일에 VITE_OPENAI_API_KEY를 추가해주세요.');
 }
