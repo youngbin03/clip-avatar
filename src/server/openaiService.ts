@@ -25,22 +25,22 @@ const openai = new OpenAI({
 
 // 스타일 이미지 경로 목록
 const STYLE_IMAGES = [
-  '/src/assets/styles/dylan-1747776730297.png',
-  '/src/assets/styles/dylan-1747776732343.png',
-  '/src/assets/styles/dylan-1747776734884.png',
-  '/src/assets/styles/dylan-1747776737337.png',
-  '/src/assets/styles/dylan-1747776739302.png',
-  '/src/assets/styles/dylan-1747776742048.png',
-  '/src/assets/styles/dylan-1747776746317.png',
-  '/src/assets/styles/dylan-1747776747931.png',
-  '/src/assets/styles/dylan-1747776750730.png',
-  '/src/assets/styles/dylan-1747776752903.png',
-  '/src/assets/styles/dylan-1747776755022.png',
-  '/src/assets/styles/dylan-1747776757803.png',
-  '/src/assets/styles/dylan-1747776760378.png',
-  '/src/assets/styles/dylan-1747776762628.png',
-  '/src/assets/styles/dylan-1747776764936.png',
-  '/src/assets/styles/dylan-1747776767139.png'
+  '/assets/styles/dylan-1747776730297.png',
+  '/assets/styles/dylan-1747776732343.png',
+  '/assets/styles/dylan-1747776734884.png',
+  '/assets/styles/dylan-1747776737337.png',
+  '/assets/styles/dylan-1747776739302.png',
+  '/assets/styles/dylan-1747776742048.png',
+  '/assets/styles/dylan-1747776746317.png',
+  '/assets/styles/dylan-1747776747931.png',
+  '/assets/styles/dylan-1747776750730.png',
+  '/assets/styles/dylan-1747776752903.png',
+  '/assets/styles/dylan-1747776755022.png',
+  '/assets/styles/dylan-1747776757803.png',
+  '/assets/styles/dylan-1747776760378.png',
+  '/assets/styles/dylan-1747776762628.png',
+  '/assets/styles/dylan-1747776764936.png',
+  '/assets/styles/dylan-1747776767139.png'
 ];
 
 // 이미지 데이터 URL을 File 객체로 변환 (PNG 형식으로)
