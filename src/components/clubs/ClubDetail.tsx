@@ -11,14 +11,14 @@ import { useNavigate } from 'react-router-dom';
 
 // 기본 프로필 이미지 배열
 const DEFAULT_PROFILE_IMAGES = [
-  '/src/assets/characters/blue_character1.png',
-  '/src/assets/characters/blue_character2.png',
-  '/src/assets/characters/blue_character3.png',
-  '/src/assets/characters/blue_character4.png',
-  '/src/assets/characters/yellow_character1.png',
-  '/src/assets/characters/yellow_character2.png',
-  '/src/assets/characters/yellow_character3.png',
-  '/src/assets/characters/yellow_character4.png'
+  '/assets/characters/blue_character1.png',
+  '/assets/characters/blue_character2.png',
+  '/assets/characters/blue_character3.png',
+  '/assets/characters/blue_character4.png',
+  '/assets/characters/yellow_character1.png',
+  '/assets/characters/yellow_character2.png',
+  '/assets/characters/yellow_character3.png',
+  '/assets/characters/yellow_character4.png'
 ];
 
 // 랜덤 프로필 이미지 선택 함수

@@ -32,14 +32,14 @@ const AvatarGenerator = ({ onAvatarGenerated, onCancel }: AvatarGeneratorProps) 
       
       // API 호출 실패 시 기본 캐릭터 이미지 사용 (테스트용)
       const defaultCharacters = [
-        '/src/assets/characters/blue_character1.png',
-        '/src/assets/characters/blue_character2.png',
-        '/src/assets/characters/blue_character3.png',
-        '/src/assets/characters/blue_character4.png',
-        '/src/assets/characters/yellow_character1.png',
-        '/src/assets/characters/yellow_character2.png',
-        '/src/assets/characters/yellow_character3.png',
-        '/src/assets/characters/yellow_character4.png'
+        '/assets/characters/blue_character1.png',
+        '/assets/characters/blue_character2.png',
+        '/assets/characters/blue_character3.png',
+        '/assets/characters/blue_character4.png',
+        '/assets/characters/yellow_character1.png',
+        '/assets/characters/yellow_character2.png',
+        '/assets/characters/yellow_character3.png',
+        '/assets/characters/yellow_character4.png'
       ];
       
       // 테스트를 위해 기본 캐릭터 중 하나를 랜덤하게 선택

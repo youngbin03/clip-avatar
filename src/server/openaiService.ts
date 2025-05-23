@@ -122,27 +122,14 @@ const loadStyleImage = async (stylePath: string): Promise<File> => {
   try {
     let imageUrl;
     
-    // 스토리지 경로 형식인지 확인
-    if (stylePath.startsWith('/src/assets/styles/')) {
-      // 파일명만 추출
-      const fileName = stylePath.split('/').pop() || '';
-      // Firebase Storage 경로 구성
-      const storagePath = `styles/${fileName}`;
-      
-      try {
-        // Firebase Storage에서 다운로드 URL 가져오기 시도
-        const storageRef = ref(storage, storagePath);
-        imageUrl = await getDownloadURL(storageRef);
-        logInfo(`Firebase Storage에서 이미지 URL 가져옴: ${imageUrl}`);
-      } catch (storageError) {
-        // Storage에서 가져오기 실패하면 로컬 경로 사용
-        logInfo(`Firebase Storage 경로 실패, 로컬 경로 사용: ${stylePath}`);
-        imageUrl = stylePath;
-      }
-    } else {
-      // 일반 경로 사용
-      imageUrl = stylePath;
+    // src/assets 경로를 assets 경로로 변환
+    if (stylePath.startsWith('/src/assets/')) {
+      stylePath = stylePath.replace('/src/assets/', '/assets/');
+      logInfo(`경로 수정됨: ${stylePath}`);
     }
+    
+    // 일반 경로 사용
+    imageUrl = stylePath;
     
     // 절대 경로인지 확인하고 조정
     if (imageUrl.startsWith('/')) {
@@ -186,22 +173,22 @@ export const generateCharacterAvatar = async (imageDataUrl: string): Promise<str
     
     // 스타일 이미지 선택 (랜덤)
     const styleImages = [
-      '/src/assets/styles/dylan-1747776730297.png',
-      '/src/assets/styles/dylan-1747776732343.png',
-      '/src/assets/styles/dylan-1747776734884.png',
-      '/src/assets/styles/dylan-1747776737337.png',
-      '/src/assets/styles/dylan-1747776739302.png',
-      '/src/assets/styles/dylan-1747776742048.png',
-      '/src/assets/styles/dylan-1747776746317.png',
-      '/src/assets/styles/dylan-1747776747931.png',
-      '/src/assets/styles/dylan-1747776750730.png',
-      '/src/assets/styles/dylan-1747776752903.png',
-      '/src/assets/styles/dylan-1747776755022.png',
-      '/src/assets/styles/dylan-1747776757803.png',
-      '/src/assets/styles/dylan-1747776760378.png',
-      '/src/assets/styles/dylan-1747776762628.png',
-      '/src/assets/styles/dylan-1747776764936.png',
-      '/src/assets/styles/dylan-1747776767139.png'
+      '/assets/styles/dylan-1747776730297.png',
+      '/assets/styles/dylan-1747776732343.png',
+      '/assets/styles/dylan-1747776734884.png',
+      '/assets/styles/dylan-1747776737337.png',
+      '/assets/styles/dylan-1747776739302.png',
+      '/assets/styles/dylan-1747776742048.png',
+      '/assets/styles/dylan-1747776746317.png',
+      '/assets/styles/dylan-1747776747931.png',
+      '/assets/styles/dylan-1747776750730.png',
+      '/assets/styles/dylan-1747776752903.png',
+      '/assets/styles/dylan-1747776755022.png',
+      '/assets/styles/dylan-1747776757803.png',
+      '/assets/styles/dylan-1747776760378.png',
+      '/assets/styles/dylan-1747776762628.png',
+      '/assets/styles/dylan-1747776764936.png',
+      '/assets/styles/dylan-1747776767139.png'
     ];
     
     // 랜덤하게 스타일 이미지 선택

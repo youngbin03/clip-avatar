@@ -94,7 +94,7 @@ const Header = () => {
             </ButtonsSection>
             
             <BlueBadge>
-              <img src="/src/assets/characters/blue_character1.png" alt="캐릭터" width="24" height="24" />
+              <img src="/assets/characters/blue_character1.png" alt="캐릭터" width="24" height="24" />
               <span>2025 라치오스 축제</span>
             </BlueBadge>
           </RightSection>

@@ -17,7 +17,7 @@ const HomePage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedClub, setSelectedClub] = useState<Club | null>(null);
   const [activityContent, setActivityContent] = useState('');
-  const [selectedImage, setSelectedImage] = useState<string>('/src/assets/characters/blue_character1.png');
+  const [selectedImage, setSelectedImage] = useState<string>('/assets/characters/blue_character1.png');
   const [profileStep, setProfileStep] = useState(1);
   const [clubName, setClubName] = useState("");
   const [clubDescription, setClubDescription] = useState("");
@@ -113,7 +113,7 @@ const HomePage = () => {
     setSearchTerm('');
     setSelectedClub(null);
     setActivityContent('');
-    setSelectedImage('/src/assets/characters/blue_character1.png');
+    setSelectedImage('/assets/characters/blue_character1.png');
     setProfileStep(1);
     setClubName("");
     setClubDescription("");
@@ -122,14 +122,14 @@ const HomePage = () => {
   };
 
   const profileImages = [
-    '/src/assets/characters/blue_character1.png',
-    '/src/assets/characters/blue_character2.png',
-    '/src/assets/characters/blue_character3.png',
-    '/src/assets/characters/blue_character4.png',
-    '/src/assets/characters/yellow_character1.png',
-    '/src/assets/characters/yellow_character2.png',
-    '/src/assets/characters/yellow_character3.png',
-    '/src/assets/characters/yellow_character4.png',
+    '/assets/characters/blue_character1.png',
+    '/assets/characters/blue_character2.png',
+    '/assets/characters/blue_character3.png',
+    '/assets/characters/blue_character4.png',
+    '/assets/characters/yellow_character1.png',
+    '/assets/characters/yellow_character2.png',
+    '/assets/characters/yellow_character3.png',
+    '/assets/characters/yellow_character4.png',
   ];
 
   // 모달 열기 로직 수정 - 동아리 추가 모달 이벤트 추가

@@ -14,7 +14,7 @@ const getRandomAvatar = () => {
   const characterTypes = ['blue', 'yellow'];
   const characterType = characterTypes[Math.floor(Math.random() * characterTypes.length)];
   const characterNumber = Math.floor(Math.random() * 4) + 1;
-  return `/src/assets/characters/${characterType}_character${characterNumber}.png`;
+  return `/assets/characters/${characterType}_character${characterNumber}.png`;
 };
 
 // 랜덤 날짜 생성 함수 (n일 전)
