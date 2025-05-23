@@ -200,7 +200,7 @@ const HomePage = () => {
           >
             <ButtonsContainer>
               <AddMemberButton onClick={() => setShowAddModal(true)}>
-                <ButtonIcon src="/src/assets/characters/blue_character2.png" />
+                <ButtonIcon src="/assets/characters/blue_character2.png" />
                 멤버 추가하기
               </AddMemberButton>
               <AddClubButton onClick={() => {
@@ -209,7 +209,7 @@ const HomePage = () => {
                 setIsCreatingClub(true);
                 setShowAddModal(true);
               }}>
-                <ButtonIcon src="/src/assets/characters/yellow_character2.png" />
+                <ButtonIcon src="/assets/characters/yellow_character2.png" />
                 동아리 추가하기
               </AddClubButton>
               <Link to="/clubs">
@@ -224,7 +224,7 @@ const HomePage = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          <HeroImage src="/src/assets/characters/character_gruop1.png" alt="캐릭터 그룹" />
+          <HeroImage src="/assets/characters/character_gruop1.png" alt="캐릭터 그룹" />
           <Blob />
         </HeroImageContainer>
       </HeroSection>
@@ -262,7 +262,7 @@ const HomePage = () => {
                   {index + 1}
                 </RankBadge>
                 <ClubAvatar>
-                  <img src={`/src/assets/characters/blue_character${(index % 4) + 1}.png`} alt={club.name} />
+                  <img src={`/assets/characters/blue_character${(index % 4) + 1}.png`} alt={club.name} />
                 </ClubAvatar>
                 <RankCardContent>
                   <RankCardTitle>{club.name}</RankCardTitle>
@@ -287,7 +287,7 @@ const HomePage = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <FeatureIcon src="/src/assets/characters/blue_character1.png" alt="기능 아이콘" />
+            <FeatureIcon src="/assets/characters/blue_character1.png" alt="기능 아이콘" />
             <FeatureTitle>동아리 랭킹</FeatureTitle>
             <FeatureDescription>
               동아리 멤버 수에 따른 랭킹을 확인할 수 있어요.
@@ -300,7 +300,7 @@ const HomePage = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <FeatureIcon src="/src/assets/characters/blue_character2.png" alt="기능 아이콘" />
+            <FeatureIcon src="/assets/characters/blue_character2.png" alt="기능 아이콘" />
             <FeatureTitle>활동 기록</FeatureTitle>
             <FeatureDescription>
               롤링페이퍼 형식으로 동아리 활동을 기록하고 공유해요.
@@ -313,7 +313,7 @@ const HomePage = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <FeatureIcon src="/src/assets/characters/blue_character3.png" alt="기능 아이콘" />
+            <FeatureIcon src="/assets/characters/blue_character3.png" alt="기능 아이콘" />
             <FeatureTitle>멤버 관리</FeatureTitle>
             <FeatureDescription>
               동아리 멤버를 추가하고 관리할 수 있어요.

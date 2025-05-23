@@ -41,7 +41,7 @@ const Header = () => {
         <HeaderContent>
           <LeftSection>
             <Logo to="/">
-              <LogoImage src="/src/assets/icons/logo.png" alt="CLIP 로고" />
+              <LogoImage src="/assets/icons/logo.png" alt="CLIP 로고" />
             </Logo>
           </LeftSection>
           
